@@ -1,111 +1,77 @@
-html,
+*, html,
 body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
+    box-sizing: border-box;
     padding: 0;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    margin: 0;
 }
 
-html,
+:root {
+--clr-white: #F1F7EE;
+--clr-green: #02c39a;
+--clr-dark-blue: #0F1E44;
+--clr-text: #41495f;
+}
+
 body {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 img {
-    display: block;
     width: 100%;
-}
-
-
-.main-wrapper {
-    margin-top: 70px;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    font-family: 'Ubuntu', sans-serif;
-    color: #0F1E44;
+    color: var(--clr-dark-blue);
+}
+
+h1 {
+    font-family: 'Cairo', sans-serif;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    font-size: 1.2rem;
 }
 
 
 h2 {
-    font-size: 25px;
+    font-size: 17px;
     letter-spacing: 1px;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
 }
 
-.intro-header h2,
-.steps-container h2 {
-    padding: 5px 10px;
-    font-size: 25px;
-    padding: 20px;
-}
-
-
 p {
-    font-family: 'Barlow', sans-serif;
-    font-style: normal;
-    font-size: .9em;
+    font-size: 14px;
     text-align: left;
-    color: #0F1E44;
+    color: var(--clr-text);
     line-height: 1.5;
-    margin-bottom: 0.85em;
-    padding: 0;
-    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
-
-.about-title,
-.tour-title,
-.contact-title {
-    font-size: 2em;
-    padding: 5% 0;
-}
-
-
-.main-header {
-    background: #0D5956;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-}
-
-.main-wrapper {
-    min-height: 100vh;
-}
-
-footer {
-    background: #0D5956;
-    width: 100%;
-    padding: 30px 0;
-}
-
-
 
 a {
     text-decoration: none;
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Cairo', sans-serif;
+    text-transform: uppercase;
     font-size: 25px;
-    color: #F1F7EE;
+    color: var(--clr-green)
+}
+
+.logo img {
+    width: 72%;
 }
 
 .logo {
-    width: 100px;
-    position: absolute;
-    top: 20px;
-    left: 30px;
+    max-width: 140px;
+    display: inline-block;
+    margin-top: 12px;
+    margin-left: 2rem;
 }
 
 
@@ -114,63 +80,91 @@ a {
 }
 
 .btn {
-    background: #275956;
-    border-radius: 10px;
-    padding: 20px 40px;
+   
+    border-radius: 3px;
+    padding: 10px 25px;
     display: inline-block;
-    font-size: 1rem;
+    font-size: 0.8rem;
+    color: var(--clr-white);
+    border: 2px solid var(--clr-green);
+    box-shadow: 0px 0px 2px var(--clr-green);
 }
 
 .btn a {
-    text-align: center;
+    text-align: center;  
 }
 
-
+.btn:hover {
+ background:var(--clr-green);
+}
 
 
 /*NAV*/
-.nav-bar {
-    text-align: right;
-    height: 70px;
-    background: #0D5956;
+.header-home {
+    background: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 60px;
 }
 
-.menu {
-    margin: 0 30px 0 0;
-    background: #0D5956;
+.toggle {
+    display: none;
 }
-
-.menu a {
-    clear: right;
-    text-decoration: none;
-    color: #F1F7EE;
-    margin: 0 10px;
-    line-height: 70px;
-    font-family: 'Barlow', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 17px;
-}
-
-.menu a:hover,
-.menu a:focus {
-    color: #227A24;
-    text-decoration: underline;
-}
-
 
 .mobile-menu {
-    margin: 0 40px 0 0;
-    font-size: 40px;
-    line-height: 70px;
-    display: none;
+    display: block;
+    cursor: pointer;
+    padding-right: 4rem;
+    margin-top: 6px;
+    font-size: 35px;
     width: 26px;
     float: right;
-    color: #F1F7EE;
+    color: var(--clr-white);
+    z-index: 100;
 }
 
-#toggle {
+
+.nav-links {
+    text-align: center;
+    padding-top: 7.5rem;
     display: none;
+    list-style: none;
+    background: var(--clr-white);
+    transform: translateY(-47px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: -10;
+}
+
+
+
+.nav-links a {
+    padding: 10% 0;
+    display: block;
+    margin: 0;
+}
+
+.toggle:checked+.mobile-menu+.nav-links {
+    display: block;
+}
+.toggle:checked+.mobile-menu {
+    color: var(--clr-green);
+}
+
+
+
+.nav-links a {
+    clear: right;
+    text-decoration: none;
+    color: var(--clr-green);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
 }
 
 /*----END NAV-----*/
@@ -180,7 +174,6 @@ a {
 
 
 /*---MAIN PAGE---*/
-
 
 .image-bg {
     width: 100%;
@@ -194,46 +187,39 @@ a {
 .alpha-bg {
     padding: 0px 20px;
     height: 100%;
-    color: #F1F7EE;
-    background: rgba(0, 0, 0, 0.6);
+    color: var(--clr-white);
+    background: rgba(0, 0, 0, 0.79);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .alpha-bg h1 {
-    font-size: 2em;
-    color: #F1F7EE;
+    color: var(--clr-white);
+    text-align: center;
 }
 
 
 .alpha-bg p {
-    margin: 0px 5px 40px 5px;
-    padding: 40px 0 0 0;
-    font-size: 1.5em;
-    font-weight: 400;
-    color: #F1F7EE;
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+    font-weight: 100;
+    color: var(--clr-white);
     text-align: center;
 }
 
-.img-content {
-    padding: 20% 0 5% 0;
-}
-
-
 .intro {
     background: #F1F7EE;
-    padding: 4em 0 2em;
+    padding: 6rem 20px;
 }
-
-
-.content-wrapper h3 {
-    padding: 20px;
-    font-size: 23px;
-}
-
 
 .intro section p {
-    margin: 0 40px;
-    line-height: 2;
-    font-size: 20px;
+    line-height: 1.8;
+    font-weight: 100;
+}
+.intro-header h2 {
+    margin-bottom: 2rem;
 }
 
 
@@ -241,11 +227,19 @@ a {
     margin: 40px 0;
 }
 
+footer {
+    background: var(--clr-green);
+    width: 100%;
+    padding: 1px 0;
+    padding: 20px 0;
+}
+
+
 footer p {
     color: #F1F7EE;
     text-align: center;
+    margin: 0;
 }
-
 
 /*---END MAIN PAGE---*/
 
@@ -254,14 +248,16 @@ footer p {
 
 /*---ABOUT US---*/
 
-.about-wrapper {
+.header .mobile-menu{
+    color: var(--clr-green);
+}
+
+.about-wrapper, .tour-wrapper, .contact-wrapper {
     background: #F1F7EE;
-    padding-bottom: 10%;
+    padding: 60px 20px;
 }
 
 .container {
-    width: 80%;
-    margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -272,10 +268,6 @@ footer p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-}
-
-.about-title {
-    color: #0F1E44;
 }
 
 .inner-container-1 {
@@ -294,21 +286,6 @@ footer p {
     background-position: center;
 }
 
-
-.inner-container-2 {
-    -webkit-box-flex: 50%;
-        -ms-flex: 50%;
-            flex: 50%;
-    background: #AECEC0;
-}
-
-.inner-container-2 p {
-    padding: 5% 5%;
-    font-size: 1.4em;
-    margin: 0 auto;
-}
-
-
 /*---END ABOUT US---*/
 
 
@@ -316,17 +293,9 @@ footer p {
 
 
 /*---TOURS---*/
-
-.tour-wrapper {
-    background: #AECEC0;
-    padding-bottom: 10%;
-}
-
-
 .inner-container-bg {
     background: #F1F7EE;
 }
-
 
 .bg-img-city {
     background: url(images/city-biking-small.jpg) no-repeat;
@@ -360,19 +329,29 @@ footer p {
     color: #0F1E44;
     font-style: italic;
     padding-bottom: 0;
+    margin-bottom: 0;
 }
 
 .card-title {
-    font-weight: 500;
+    font-weight: 600;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .time {
-    font-weight: 500;
-    color: #227A24;
+    font-weight: 700;
+    color: var(--clr-green);
 }
 
 .tour-container {
     margin-bottom: 5%;
+}
+
+.tour-content {
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 .tour-content-right {
@@ -383,12 +362,9 @@ footer p {
 .tour-content-right a {
     color: #0F1E44;
     text-decoration: underline;
-    font-size: 1.2em;
+    font-size: 0.9rem;
     text-transform: inherit;
-    padding: 5% 2% 2% 3%;
 }
-
-
 /*---END TOURS---*/
 
 
@@ -398,6 +374,14 @@ footer p {
 .contact-wrapper {
     background: #F1F7EE;
     padding-bottom: 30%;
+}
+
+.inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -417,7 +401,7 @@ footer p {
 
 .inner-contact-title {
     font-size: 1.6em;
-    padding: 5%;
+    padding-bottom: 5%;
     font-weight: 500;
 }
 
@@ -426,18 +410,22 @@ footer p {
     margin-top: 20%;
 }
 
-
-.top p,
-.bottom p {
-    font-size: 1.4em;
+form {
+    width: 100%;
 }
 
+.contact-info {
+    font-size: 0.7rem;
+}
+.contact-info p{
+    margin: 0;
+}
 .txt-form {
+    font-size: 0.8rem;
     border: 1px solid #0F1E44;
     margin: 15px 0;
-    padding: 12px 18px;
-    border-radius: 5px;
-    width: 300px;
+    padding: 12px 6px;
+    border-radius: 3px;
 }
 
 .txt-form label {
@@ -457,199 +445,146 @@ textarea {
     border: none;
     background: none;
     outline: none;
-    font-size: 1em;
     margin-top: 6px;
 
 }
 
 
 .btn-form {
-    background: #227A24;
-    padding: 20px 70px;
-    display: block;
-    cursor: pointer;
+    color: var(--clr-dark-blue);
+    width: 100%;
     text-align: center;
-    border-radius: 5px;
 }
 
 .inner-contact-form div {
     background: white;
 }
-
-
 /*--END CONTACT--*/
 
 
+@media only screen and (min-width: 850px) {
 
-
-
-
-
-
-/*--MEDIA QUARIES--*/
-
-@media only screen and (max-width: 370px) {
-
-    .alpha-bg h1 {
-        font-size: 1.5rem;
+    nav {
+        max-width: 90%;
+        padding: 1.5% 0 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        padding: 0;
     }
 
-    .alpha-bg p {
-        font-size: 1rem;
+    .logo {
+        margin-top: 0;
+    }
+    .nav-links {
+        margin-top: 0;
+        padding-top: 0;
+       display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+       width: 45%;
+    }
+    .nav-links a {
+        font-size: 0.8rem;
+       
+    }
+    .nav-links li {
+        border-bottom-color: transparent;
+        font-size: 0.8rem;
     }
 
-    .contact-flex {
-        font-size: 12px;
+    li:hover {
+        border-bottom-color: #F1F7EE;
+        transition: border-bottom 0.5s ease-in-out;
     }
-
-    .btn {
-        padding: 10px 20px;
-        font-size: 20px;
-    }
-    .txt-form {
-        width: 200px;
-    }
-
-}
-
-
-
-
-@media only screen and (max-width: 850px) {
     .mobile-menu {
-        display: block;
-        cursor: pointer;
-    }
-
-    .menu {
-        text-align: center;
-        width: 100%;
         display: none;
     }
-
-    .menu a {
-        display: block;
-        border-bottom: 1px solid #F1F7EE;
-        margin: 0;
+    ul {
+        display: flex;
+        justify-content: flex-end;
     }
 
-    #toggle:checked+.menu {
-        display: block;
-
-    }
-
-}
-
-
-@media only screen and (min-width: 700px) {
-
-    /*--START PAGE --*/
-    .intro-header h1 {
-        font-size: 2.5em;
-    }
-
-    .intro section p {
-        font-size: 1.3em;
-        padding: 20px;
-        margin: 0;
-        text-align: left;
-    }
-
-
-
-    /*--ABOUT US --*/
-
-    .inner-container-1,
-    .inner-container-2 {
+    .logo img {
         width: 80%;
-    }
+    } 
 
-    .content-right {
-        height: 400px;
-    }
+        /*--ABOUT US --*/
+        .inner-container-1,
+        .inner-container-2 {
+            width: 80%;
+        }
+    
+        .content-right {
+            height: 400px;
+        }
+    
+        .content-right p {
+            padding: 5% 2% 2% 3%;
+            line-height: 2;
+            font-size: 1.2em;
+        }
+    
+    
+        .tour-content-right {
+            height: 600px;
+        }
+    
+        .tour-title,
+        .about-title,
+        .contact-title {
+            font-size: 2.5em;
+        }
+    
+    
+        /*---CONTACT---*/
+        .contact-flex {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+            -ms-flex-pack: distribute;
+                justify-content: space-around;
+        }
 
-    .content-right p {
-        padding: 5% 2% 2% 3%;
-        line-height: 2;
-        font-size: 1.2em;
-    }
-
-
-    .tour-content-right {
-        height: 600px;
-    }
-
-    .tour-title,
-    .about-title,
-    .contact-title {
-        font-size: 2.5em;
-    }
-
-
-    /*---CONTACT---*/
-    .contact-flex {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -ms-flex-pack: distribute;
-            justify-content: space-around;
-    }
+        .image-bg {
+            background: url(images/cycling_landscape.jpg) no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+    
+        .content-wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+                -ms-flex-direction: row;
+                    flex-direction: row;
+        }
+    
+        .intro-header h1 {
+            margin-bottom: 0.5em;
+        }
+    
+        .btn {
+            padding: 12px 24px;
+            font-size: 16px;
+        }
 
 }
 
-
-
-@media only screen and (min-width: 800px) {
-    .image-bg {
-        background: url(images/cycling_landscape.jpg) no-repeat;
-        background-size: cover;
-        height: 100vh;
-    }
-
-    .content-wrapper {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-    }
-
-    .intro-header h1 {
-        margin-bottom: 0.5em;
-    }
-
-    .btn {
-        padding: 12px 24px;
-        font-size: 16px;
-    }
-
-}
 
 
 @media only screen and (min-width: 1000px) {
 
-    .main-header {
-        background: #0D5956;
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 100;
-    }
-
     .logo {
         left: 200px;
-    }
-
-    .inner-header {
-        width: 70%;
-       float: right;
     }
 
     /*MAIN PAGE---*/
@@ -807,6 +742,7 @@ textarea {
 
     .card-title {
         font-size: 1.5em;
+     
 
     }
 
