@@ -1,780 +1,729 @@
-*, html,
+*,
+html,
 body {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
 :root {
---clr-white: #F1F7EE;
---clr-green: #02c39a;
---clr-dark-blue: #0F1E44;
---clr-text: #41495f;
+  --clr-white: #f1f7ee;
+  --clr-green: #02c39a;
+  --clr-dark-blue: #0f1e44;
+  --clr-text: #41495f;
 }
 
-body {
-    font-family: 'Roboto', sans-serif;
+main {
+  flex: 1;
 }
+
 
 img {
-    width: 100%;
+  width: 100%;
+}
+
+.img-container {
+  width: 100%;
+  height: 200px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    color: var(--clr-dark-blue);
+  color: var(--clr-dark-blue);
 }
 
 h1 {
-    font-family: 'Cairo', sans-serif;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    font-size: 1.2rem;
+  font-family: "Cairo", sans-serif;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  font-size: 1.2rem;
 }
 
-
 h2 {
-    font-size: 17px;
-    letter-spacing: 1px;
+  font-size: 17px;
+  letter-spacing: 1px;
 }
 
 h3 {
-    font-size: 15px;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
 }
 
 p {
-    font-size: 14px;
-    text-align: left;
-    color: var(--clr-text);
-    line-height: 1.5;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+  font-size: 14px;
+  text-align: left;
+  color: var(--clr-text);
+  line-height: 1.5;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 a {
-    text-decoration: none;
-    font-family: 'Cairo', sans-serif;
-    text-transform: uppercase;
-    font-size: 25px;
-    color: var(--clr-green)
+  text-decoration: none;
+  font-family: "Cairo", sans-serif;
+  text-transform: uppercase;
+  font-size: 25px;
+  color: var(--clr-green);
 }
 
 .logo img {
-    width: 72%;
+  width: 72%;
 }
 
 .logo {
-    max-width: 140px;
-    display: inline-block;
-    margin-top: 12px;
-    margin-left: 2rem;
+  max-width: 140px;
+  display: inline-block;
+  margin-top: 12px;
+  margin-left: 2rem;
 }
 
-
 .btn-container {
-    text-align: center;
+  text-align: center;
 }
 
 .btn {
-   
-    border-radius: 3px;
-    padding: 10px 25px;
-    display: inline-block;
-    font-size: 0.8rem;
-    color: var(--clr-white);
-    border: 2px solid var(--clr-green);
-    box-shadow: 0px 0px 2px var(--clr-green);
+  border-radius: 3px;
+  padding: 14px 33px;
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--clr-dark-blue);
+  background: var(--clr-green);
+  box-shadow: 0px 0px 2px var(--clr-green);
+  font-weight: 700;
 }
 
 .btn a {
-    text-align: center;  
+  text-align: center;
 }
 
 .btn:hover {
- background:var(--clr-green);
+  background: #078a6e;
+}
+.about-wrapper,
+.tour-wrapper,
+.contact-wrapper {
+  background: #f1f7ee;
+  padding: 0 5%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
-
 /*NAV*/
-.header-home {
-    background: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    height: 60px;
+.header-home,
+.header {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 60px;
 }
 
 .toggle {
-    display: none;
+  display: none;
 }
 
 .mobile-menu {
-    display: block;
-    cursor: pointer;
-    padding-right: 4rem;
-    margin-top: 6px;
-    font-size: 35px;
-    width: 26px;
-    float: right;
-    color: var(--clr-white);
-    z-index: 100;
+  display: block;
+  cursor: pointer;
+  padding-right: 4rem;
+  margin-top: 6px;
+  font-size: 35px;
+  width: 26px;
+  float: right;
+  color: var(--clr-white);
+  z-index: 100;
 }
-
 
 .nav-links {
-    text-align: center;
-    padding-top: 7.5rem;
-    display: none;
-    list-style: none;
-    background: var(--clr-white);
-    transform: translateY(-47px);
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: -10;
+  text-align: center;
+  padding-top: 7.5rem;
+  display: none;
+  list-style: none;
+  background: #dfe4dc;
+  transform: translateY(-47px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -10;
 }
-
-
 
 .nav-links a {
-    padding: 10% 0;
-    display: block;
-    margin: 0;
+  padding: 30px 0;
+  display: block;
+  margin: 0;
 }
 
-.toggle:checked+.mobile-menu+.nav-links {
-    display: block;
+.toggle:checked + .mobile-menu + .nav-links {
+  display: block;
 }
-.toggle:checked+.mobile-menu {
-    color: var(--clr-green);
+.toggle:checked + .mobile-menu {
+  color: var(--clr-green);
 }
-
-
 
 .nav-links a {
-    clear: right;
-    text-decoration: none;
-    color: var(--clr-green);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 14px;
+  clear: right;
+  text-decoration: none;
+  color: var(--clr-dark-blue);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 14px;
 }
-
 /*----END NAV-----*/
 
 
-
-
-
-/*---MAIN PAGE---*/
-
+/*---HOME---*/
 .image-bg {
-    width: 100%;
-    line-height: 1.5;
-    background: url(images/re-cycle_small.jpg) no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100vh;
+  width: 100%;
+  line-height: 1.5;
+  background: url(images/re-cycle_small.jpg) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
 }
 
 .alpha-bg {
-    padding: 0px 20px;
-    height: 100%;
-    color: var(--clr-white);
-    background: rgba(0, 0, 0, 0.79);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  padding: 0px 20px;
+  height: 100%;
+  color: var(--clr-white);
+  background: rgba(0, 0, 0, 0.79);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .alpha-bg h1 {
-    color: var(--clr-white);
-    text-align: center;
+  color: var(--clr-green);
+  text-align: center;
+  text-transform: uppercase;
 }
 
-
 .alpha-bg p {
-    padding-bottom: 1.5rem;
-    font-size: 1rem;
-    font-weight: 100;
-    color: var(--clr-white);
-    text-align: center;
+  padding-bottom: 1.5rem;
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--clr-white);
+  text-align: center;
 }
 
 .intro {
-    background: #F1F7EE;
-    padding: 6rem 20px;
+  background: #f1f7ee;
+  padding: 6rem 20px;
 }
 
 .intro section p {
-    line-height: 1.8;
-    font-weight: 100;
+  line-height: 1.8;
+  font-weight: 300;
 }
 .intro-header h2 {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
-
 .content-wrapper section {
-    margin: 40px 0;
+  margin: 40px 0;
 }
 
 footer {
-    background: var(--clr-green);
-    width: 100%;
-    padding: 1px 0;
-    padding: 20px 0;
+  background: var(--clr-green);
+  width: 100%;
+  padding: 1px 0;
+  padding: 20px 0;
 }
-
 
 footer p {
-    color: #F1F7EE;
-    text-align: center;
-    margin: 0;
+  color:var(--clr-dark-blue);
+  text-align: center;
+  margin: 0;
+  text-transform: uppercase;
+}
+footer {
+  margin-top: auto;
 }
 
-/*---END MAIN PAGE---*/
-
+/*---END HOME---*/
 
 
 
 /*---ABOUT US---*/
-
-.header .mobile-menu{
-    color: var(--clr-green);
-}
-
-.about-wrapper, .tour-wrapper, .contact-wrapper {
-    background: #F1F7EE;
-    padding: 60px 20px;
+.header .mobile-menu {
+  color: var(--clr-green);
 }
 
 .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  max-width: 350px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .inner-container-1 {
-    -webkit-box-flex: 25%;
-        -ms-flex: 25%;
-            flex: 25%;
-    width: 100%;
+  -webkit-box-flex: 25%;
+  -ms-flex: 25%;
+  flex: 25%;
+  width: 100%;
 }
 
-.bg-img-team {
-    background: url(images/team.jpg) no-repeat;
-    width: 100%;
-    line-height: 1.5;
-    background-size: cover;
-    height: 400px;
-    background-position: center;
+.about-wrapper .img-container {
+  background-image: url(images/team.jpg);
 }
-
 /*---END ABOUT US---*/
-
-
 
 
 
 /*---TOURS---*/
 .inner-container-bg {
-    background: #F1F7EE;
+  background: #f1f7ee;
 }
 
-.bg-img-city {
-    background: url(images/city-biking-small.jpg) no-repeat;
-    width: 100%;
-    line-height: 1.5;
-    background-size: cover;
-    height: 400px;
-    background-position: center;
+.tour-container:nth-child(2) .img-container {
+  background-image: url(images/city-biking-small.jpg);
 }
-
-.bg-img-river {
-    background: url(images/river-biking-small.jpg) no-repeat;
-    width: 100%;
-    line-height: 1.5;
-    background-size: cover;
-    height: 400px;
-    background-position: center;
+.tour-container:nth-child(3) .img-container {
+  background-image: url(images/river-biking-small.jpg);
 }
-
-.bg-img-mountain {
-    background: url(images/mountain-biking-small.jpg) no-repeat;
-    width: 100%;
-    line-height: 1.5;
-    background-size: cover;
-    height: 400px;
-    background-position: center;
-
+.tour-container:nth-child(4) .img-container {
+  background-image: url(images/mountain-biking-small.jpg);
+  background-position: right center;
 }
 
 .adventures {
-    color: #0F1E44;
-    font-style: italic;
-    padding-bottom: 0;
-    margin-bottom: 0;
+  color: #0f1e44;
+  font-style: italic;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .card-title {
-    font-weight: 600;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: space-between;
+  font-weight: 500;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title span {
+  font-size: 0.9rem;
+  padding-top: 0.5rem;
 }
 
 .time {
-    font-weight: 700;
-    color: var(--clr-green);
+  font-weight: 700;
+  color: var(--clr-green);
 }
 
 .tour-container {
-    margin-bottom: 5%;
+  margin-bottom: 25%;
 }
 
 .tour-content {
-    margin-top: 0;
-    margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
 }
 
 .tour-content-right {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
-
-.tour-content-right a {
-    color: #0F1E44;
-    text-decoration: underline;
-    font-size: 0.9rem;
-    text-transform: inherit;
+.content-container a {
+  color: #0f1e44;
+  text-decoration: underline;
+  font-size: 0.9rem;
+  text-transform: inherit;
 }
 /*---END TOURS---*/
 
 
 
-
 /*---CONTACT---*/
 .contact-wrapper {
-    background: #F1F7EE;
-    padding-bottom: 30%;
+  background: #f1f7ee;
 }
 
 .inner-container {
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.contact-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  font-size: 13px;
+}
+
+.inner-contact-title {
+  font-size: 0.9rem;
+  padding-bottom: 5%;
+  font-weight: 500;
+}
+
+.inner-contact-title .adress {
+  margin-top: 20%;
+}
+
+form {
+  width: 100%;
+
+}
+
+.contact-info {
+  font-size: 0.7rem;
+}
+.contact-info p {
+  margin: 0;
+  font-size: 0.7rem;
+}
+.txt-form {
+  font-size: 0.8rem;
+  border: 1px solid #0f1e44;
+  margin: 15px 0;
+  padding: 12px 6px;
+  border-radius: 3px;
+}
+
+.txt-form label {
+  display: block;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.7em;
+}
+
+textarea {
+  height: 100px;
+}
+
+.txt-form input,
+.txt-form textarea {
+  width: 100%;
+  border: none;
+  background: none;
+  outline: none;
+  margin-top: 6px;
+}
+
+.btn-form {
+  color: var(--clr-dark-blue);
+  width: 100%;
+  text-align: center;
+  padding: 7px 33px;
+}
+
+.inner-contact-form div {
+  background: white;
+}
+/*--END CONTACT--*/
+
+
+
+
+
+@media only screen and (min-width: 600px) {
+
+  .img-container {
+    height: 330px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 22px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+
+  .alpha-bg p {
+    padding-bottom: 5.5rem;
+  }
+
+  .outer-section,
+  .img-content,
+  .section-title,
+  .container {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .section-title {
+    margin-top: 3rem;
+  }
+
+  .tour-container {
+    padding-bottom: 5rem;
+  }
+
+
+  .img-content p {
+    width: 76%;
+    margin: 0 auto;
+  }
+
+  .container {
+    flex-direction: row;
+    align-items: flex-start;
     justify-content: space-between;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+  }
+
+  .tour-container {
+    justify-content: space-between;
+  }
+
+  .adventures {
+    margin-top: 0;
+  }
+
+  .img-container,
+  .tour-container .content-container,
+  .inner-container-2 {
+    width: 48%;
+  }
+
+  .content-right {
+    margin-top: 0;
+  }
+
+  /*Contact*/
+
+  .inner-container {
+    flex-direction: column;
+    align-items: baseline;
+    width: 30%;
+  }
+  .txt-form:nth-child(1) {
+    margin-top: 0;
+  }
+  form {
+    width: 300px;
+    margin-right: 41%;
+  }
+
+  .contact-info {
+    padding-bottom: 1rem;
+  }
 }
 
 
-.contact-flex {
+@media only screen and (min-width: 850px) {
+
+    .alpha-bg .img-content p {
+    width: 57%;
+  }
+
+  nav {
+    max-width: 90%;
+    padding: 1.5% 0 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+  }
+
+  .logo {
+    margin-top: 0;
+    margin-right: auto;
+  }
+  .nav-links {
+    position: inherit;
+    transform: inherit;
+    background: transparent;
+    margin-top: 0;
+    padding-top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 45%;
+    z-index: 1001;
+  }
+  .header-home .nav-links a {
+    color: var(--clr-white);
+  }
+
+  .header {
+    background: var(--clr-white);
+  }
+  .nav-links a {
+    font-size: 0.8rem;
+    padding: 0;
+  }
+
+  .nav-links li {
+    border-bottom: 2px solid transparent;
+    font-size: 0.8rem;
+    padding-bottom: 0.3rem;
+  }
+
+  li:hover {
+    border-bottom-color: var(--clr-green);
+    transition: border-bottom 0.5s ease-in-out;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+  ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .logo img {
+    width: 80%;
+  }
+
+  .btn-container .btn {
+    padding: 9px 24px;
+    font-size: 13px;
+  }
+
+  .section-title {
+    padding-top: 4rem;
+    padding-bottom: 3rem;
+  }
+  .alpha-bg .img-content {
+    max-width: 810px;
+  }
+
+
+  .alpha-bg h1 {
+    font-size: 1.5rem;
+  }
+
+
+  /*--ABOUT US --*/
+
+  .about-wrapper .img-container {
+    width: 50%;
+  }
+
+  .inner-container-2 {
+    width: 48%;
+  }
+
+  .content-right p {
+    line-height: 2;
+    margin-top: 0;
+  }
+
+  .tour-content-right {
+    height: 600px;
+  }
+
+  /*---CONTACT---*/
+  .contact-flex {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
-    font-size: 13px;
-}
+    justify-content: space-around;
+  }
 
+  .image-bg {
+    background: url(images/cycling_landscape.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+  }
 
-.inner-contact-title {
-    font-size: 1.6em;
-    padding-bottom: 5%;
-    font-weight: 500;
-}
+  .intro {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-
-.inner-contact-title .adress {
-    margin-top: 20%;
-}
-
-form {
-    width: 100%;
-}
-
-.contact-info {
-    font-size: 0.7rem;
-}
-.contact-info p{
-    margin: 0;
-}
-.txt-form {
-    font-size: 0.8rem;
-    border: 1px solid #0F1E44;
-    margin: 15px 0;
-    padding: 12px 6px;
-    border-radius: 3px;
-}
-
-.txt-form label {
-    display: block;
-    text-align: left;
-    text-transform: uppercase;
-    font-size: 0.7em;
-}
-
-textarea {
-    height: 100px;
-}
-
-.txt-form input,
-.txt-form textarea {
-    width: 100%;
-    border: none;
-    background: none;
-    outline: none;
-    margin-top: 6px;
-
-}
-
-
-.btn-form {
-    color: var(--clr-dark-blue);
-    width: 100%;
-    text-align: center;
-}
-
-.inner-contact-form div {
-    background: white;
-}
-/*--END CONTACT--*/
-
-
-@media only screen and (min-width: 850px) {
-
-    nav {
-        max-width: 90%;
-        padding: 1.5% 0 0;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 100%;
-        padding: 0;
-    }
-
-    .logo {
-        margin-top: 0;
-    }
-    .nav-links {
-        margin-top: 0;
-        padding-top: 0;
-       display: flex;
-    justify-content: space-evenly;
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-       width: 45%;
-    }
-    .nav-links a {
-        font-size: 0.8rem;
-       
-    }
-    .nav-links li {
-        border-bottom-color: transparent;
-        font-size: 0.8rem;
-    }
+  }
 
-    li:hover {
-        border-bottom-color: #F1F7EE;
-        transition: border-bottom 0.5s ease-in-out;
-    }
-    .mobile-menu {
-        display: none;
-    }
-    ul {
-        display: flex;
-        justify-content: flex-end;
-    }
+  .content-wrapper div {
+    width: 46%;
+  }
 
-    .logo img {
-        width: 80%;
-    } 
-
-        /*--ABOUT US --*/
-        .inner-container-1,
-        .inner-container-2 {
-            width: 80%;
-        }
-    
-        .content-right {
-            height: 400px;
-        }
-    
-        .content-right p {
-            padding: 5% 2% 2% 3%;
-            line-height: 2;
-            font-size: 1.2em;
-        }
-    
-    
-        .tour-content-right {
-            height: 600px;
-        }
-    
-        .tour-title,
-        .about-title,
-        .contact-title {
-            font-size: 2.5em;
-        }
-    
-    
-        /*---CONTACT---*/
-        .contact-flex {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                    flex-direction: row;
-            -ms-flex-pack: distribute;
-                justify-content: space-around;
-        }
-
-        .image-bg {
-            background: url(images/cycling_landscape.jpg) no-repeat;
-            background-size: cover;
-            height: 100vh;
-        }
-    
-        .content-wrapper {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-orient: horizontal;
-            -webkit-box-direction: normal;
-                -ms-flex-direction: row;
-                    flex-direction: row;
-        }
-    
-        .intro-header h1 {
-            margin-bottom: 0.5em;
-        }
-    
-        .btn {
-            padding: 12px 24px;
-            font-size: 16px;
-        }
-
+  .intro-header h1 {
+    margin-bottom: 0.5em;
+  }
 }
-
 
 
 @media only screen and (min-width: 1000px) {
+  .logo {
+    left: 200px;
+  }
 
-    .logo {
-        left: 200px;
-    }
+  .outer-section, .container
+  .img-content,
+  .section-title,
+  .container {
+    max-width: 60%;
+    margin: 0 auto;
+  }
 
-    /*MAIN PAGE---*/
-    .outer-section {
-        width: 80%;
-        margin: 0 auto;
-        padding: 30px 0;
-    }
-
-    .img-content {
-        width: 60%;
-        margin: 0 auto;
-        padding: 10% 0 5% 0;
-
-    }
-
-    .content-wrapper h3 {
-        text-align: left;
-    }
-
-    .btn {
-        font-size: 20px;
-        padding: 15px 34px;
-    }
-
-    footer {
-        text-align: center;
-    }
+  .img-content {
+    width: 60%;
+    padding: 10% 0 5% 0;
+  }
 
 
-    /*--ABOUT US --*/
-    .container {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -webkit-box-align: normal;
-            -ms-flex-align: normal;
-                align-items: normal;
-        width: 65%
-    }
+  .intro section p,
+  .content-right p,
+  .contact-info p {
+    font-size: 0.8rem;
+  }
+  .inner-contact-title {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
 
-    .bg-img-team {
-        background: url(images/team-big.jpg) no-repeat;
-        width: 100%;
-        line-height: 1.5;
-        background-size: cover;
-        height: 400px;
-        background-position: center center;
+  .content-wrapper h3 {
+    text-align: left;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
 
-    }
-
-    .inner-container-2 {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-    }
-
-    .content-right {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-    }
-
-    .content-right p {
-        padding: 5% 5%;
-        line-height: 1.8;
-        font-size: 1.1em;
-    }
-
-    /*---TOURS---*/
-    .tour-title {
-        padding: 5% 0 0 0;
-    }
-
-
-    .bg-img-city {
-        background: url(images/city-biking-big.jpg) no-repeat;
-        width: 100%;
-        line-height: 1.5;
-        background-size: cover;
-        height: 400px;
-        background-position: center;
-    }
-
-    .bg-img-river {
-        background: url(images/river-biking-big.jpg) no-repeat;
-        width: 100%;
-        line-height: 1.5;
-        background-size: cover;
-        height: 400px;
-        background-position: center;
-    }
-
-    .bg-img-mountain {
-        background: url(images/mountain_biking_big.jpg) no-repeat;
-        width: 100%;
-        line-height: 1.5;
-        background-size: cover;
-        height: 400px;
-        background-position: center;
-
-    }
-
-    .city-mobile,
-    .river-mobile,
-    .mountain-mobile {
-        display: none;
-    }
-
-    .city-desktop,
-    .river-desktop,
-    .mountain-desktop {
-        display: block;
-    }
-
-    .tour-container {
-        margin-top: 5%;
-    }
-
-    .tour-content-right {
-        display: block;
-        padding: 0 10%;
-    }
-
-    .tour-content-right p {
-        padding: 0;
-        font-size: 1em;
-        padding-bottom: 2%;
-    }
-
-    .tour-content-right-city,
-    .tour-content-right-river,
-    .tour-content-right-mountain {
-        height: auto;
-    }
-
-
-    .adventures,
-    .time {
-        font-size: 1em;
-    }
-
-    .card-title {
-        font-size: 1.5em;
-     
-
-    }
-
-    .tour-container-reverse {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: reverse;
-            -ms-flex-direction: row-reverse;
-                flex-direction: row-reverse;
-    }
-
-
-    .tour-content-right a {
-        padding: 0;
-
-    }
-
-
-    /*----CONTACT----*/
-
-    .contact-flex {
-        display: block;
-    }
-
-    .txt-form {
-        width: 500px;
-    }
-
-    .contact-info-container {
-        margin: 20px;
-    }
-
-    .btn-form {
-        border-radius: 5px;
-    }
+  .tour-content-right a {
+    padding: 0;
+  }
 }
