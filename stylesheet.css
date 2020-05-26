@@ -35,7 +35,6 @@ img {
 .img-container {
   width: 100%;
   height: 200px;
-  width: 100%;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -198,6 +197,7 @@ a {
   background: url(images/re-cycle_small.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
+  background-repeat: no-repeat;
   height: 100vh;
 }
 
@@ -363,9 +363,6 @@ footer {
 
 
 /*---CONTACT---*/
-.contact-wrapper {
-  background: #f1f7ee;
-}
 
 .inner-container {
   display: flex;
@@ -501,10 +498,6 @@ textarea {
     justify-content: space-between;
   }
 
-  .tour-container {
-    justify-content: space-between;
-  }
-
   .adventures {
     margin-top: 0;
   }
@@ -622,9 +615,7 @@ textarea {
   }
 
 
-  .alpha-bg h1 {
-    font-size: 1.5rem;
-  }
+ 
 
 
   /*--ABOUT US --*/
@@ -633,8 +624,8 @@ textarea {
     width: 50%;
   }
 
-  .inner-container-2 {
-    width: 48%;
+  .content-right {
+    padding-left: 20px;
   }
 
   .content-right p {
@@ -660,9 +651,8 @@ textarea {
   }
 
   .image-bg {
-    background: url(images/cycling_landscape.jpg) no-repeat;
-    background-size: cover;
-    height: 100vh;
+    background-image: url(images/cycling_landscape.jpg);
+
   }
 
   .intro {
@@ -697,7 +687,6 @@ textarea {
   .section-title,
   .container {
     max-width: 60%;
-    margin: 0 auto;
   }
 
   .img-content {
@@ -711,11 +700,7 @@ textarea {
   .contact-info p {
     font-size: 0.8rem;
   }
-  .inner-contact-title {
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-
+ 
   .content-wrapper h3 {
     text-align: left;
   }
