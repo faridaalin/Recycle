@@ -230,7 +230,7 @@ a {
 .image-bg {
   width: 100%;
   line-height: 1.5;
-  background: url(images/re-cycle_small.jpg) no-repeat;
+  background: url(../images/re-cycle_small.jpg) no-repeat;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -335,7 +335,7 @@ footer {
 }
 
 .about-wrapper .img-container {
-  background-image: url(images/team.jpg);
+  background-image: url(../images/team.jpg);
 }
 /*---END ABOUT US---*/
 
@@ -347,13 +347,13 @@ footer {
 }
 
 .tour-container:nth-child(2) .img-container {
-  background-image: url(images/city-biking-small.jpg);
+  background-image: url(../images/city-biking-small.jpg);
 }
 .tour-container:nth-child(3) .img-container {
-  background-image: url(images/river-biking-small.jpg);
+  background-image: url(../images/river-biking-small.jpg);
 }
 .tour-container:nth-child(4) .img-container {
-  background-image: url(images/mountain-biking-small.jpg);
+  background-image: url(../images/mountain-biking-small.jpg);
   background-position: right center;
 }
 
@@ -746,7 +746,7 @@ textarea {
   }
 
   .image-bg {
-    background-image: url(images/cycling_landscape.jpg);
+    background-image: url(..);
 
   }
 
