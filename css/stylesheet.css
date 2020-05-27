@@ -1,3 +1,4 @@
+
 /*
 * Prefixed by https://autoprefixer.github.io
 * PostCSS: v7.0.29,
@@ -260,7 +261,6 @@ a {
 
 .alpha-bg h1 {
   color: var(--clr-white);
-  /* color: var(--clr-green); */
   text-align: center;
   text-transform: uppercase;
 }
@@ -346,13 +346,14 @@ footer {
   background: #f1f7ee;
 }
 
-.tour-container:nth-child(2) .img-container {
+.tour-container:nth-child(1) .img-container {
   background-image: url(../images/city-biking-small.jpg);
 }
-.tour-container:nth-child(3) .img-container {
+.tour-container:nth-child(2) .img-container {
   background-image: url(../images/river-biking-small.jpg);
+  background-position: top;
 }
-.tour-container:nth-child(4) .img-container {
+.tour-container:nth-child(3) .img-container {
   background-image: url(../images/mountain-biking-small.jpg);
   background-position: right center;
 }
@@ -424,6 +425,10 @@ footer {
           align-items: center;
   height: 100%;
   width: 100%;
+
+  .contact-inner-wrapper {
+    width: 100%;
+  }
 }
 
 .contact-flex {
@@ -539,6 +544,8 @@ textarea {
 
   .tour-container {
     padding-bottom: 5rem;
+    margin-bottom: 0;
+
   }
 
 
@@ -546,52 +553,72 @@ textarea {
     width: 76%;
     margin: 0 auto;
   }
-
+.about-wrapper .container, .tour-container .container 
   .container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+            -webkit-box-align: start;
+                -ms-flex-align: start;
+                    align-items: flex-start;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
   }
+
+  .tour-container .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
 
   .adventures {
     margin-top: 0;
   }
 
-  .img-container,
-  .tour-container .content-container,
-  .inner-container-2 {
-    width: 48%;
-  }
-
   .content-right {
     margin-top: 0;
+    font-weight: 300;
   }
 
   /*Contact*/
 
   .inner-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-    width: 30%;
+ -webkit-box-orient: vertical;
+ -webkit-box-direction: normal;
+     -ms-flex-direction: column;
+         flex-direction: column;
+ -webkit-box-align: baseline;
+     -ms-flex-align: baseline;
+         align-items: baseline;
+ width: auto;
+ margin-bottom: auto;
   }
+
+
+  .contact-wrapper .contact-inner-wrapper{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    height: 100%;
+    width: 100%;
+   
+  }
+
   .txt-form:nth-child(1) {
     margin-top: 0;
   }
   form {
     width: 300px;
-    margin-right: 41%;
+    margin-right: 15%;
   }
 
   .contact-info {
@@ -605,6 +632,11 @@ textarea {
 
 
 @media only screen and (min-width: 850px) {
+
+  .nav-bar, .img-content, .outer-section, .section-title, .about-wrapper article, .tour-wrapper section, .contact-wrapper section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
     .alpha-bg .img-content p {
     width: 57%;
@@ -778,6 +810,47 @@ textarea {
   .intro-header h1 {
     margin-bottom: 0.5em;
   }
+
+  .about-wrapper .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 100%;
+  }
+
+
+  .tour-wrapper .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    height: 100%;
+  }
+
+  .tour-wrapper .card .img-container, .content-container,
+  .about-wrapper .container .img-container, 
+  .about-wrapper .container .inner-container-2  {
+    width: 48%;
+  }
+
+  .contact-wrapper .inner-container {
+    width: 20%;
+  }
+
+  .contact-wrapper .contact-inner-wrapper {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+
+  form {
+    width: 30%;
+  }
 }
 
 
@@ -786,23 +859,16 @@ textarea {
     left: 200px;
   }
 
-  .outer-section, .container
-  .img-content,
-  .section-title,
-  .container {
-    max-width: 60%;
-  }
-
   .img-content {
     width: 60%;
     padding: 10% 0 5% 0;
   }
 
-
-  .intro section p,
-  .content-right p,
   .contact-info p {
     font-size: 0.8rem;
+  }
+  .intro section p, .content-right p {
+    font-size: 1rem;
   }
  
   .content-wrapper h3 {

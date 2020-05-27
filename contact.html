@@ -32,44 +32,47 @@
     </header>
 
     <main class="main-wrapper contact-wrapper">
-        <div>
-            <h1 class="section-title contact-title">Contact Information</h1>
+        <div class="section-title">
+            <h1 class="contact-title">Contact Information</h1>
         </div>
-        <section class="container">
-            <div class="inner-container">
-                <div class="contact-info">
-                    <h3 class="inner-contact-title">Contact</h3>
-                    <div class="contact-info top">
-                        <p>+47 40404040 <br>re-cycle@mail.com</p>
+        <section class="container"> 
+            <div class="contact-inner-wrapper">
+                <div class="inner-container">
+                    <div class="contact-info">
+                        <h3 class="inner-contact-title">Contact</h3>
+                        <div class="contact-info top">
+                            <p>+47 40404040 <br>re-cycle@mail.com</p>
+                        </div>
+                    </div>
+    
+                    <div class="contact-info">
+                        <h3 class="inner-contact-title adress">Adress</h3>
+    
+                        <div class="contact-info bottom">
+                            <p>Youngstorvet <br>Oslo, Norway</p>
+                        </div>
                     </div>
                 </div>
-
-                <div class="contact-info">
-                    <h3 class="inner-contact-title adress">Adress</h3>
-
-                    <div class="contact-info bottom">
-                        <p>Youngstorvet <br>Oslo, Norway</p>
+    
+    
+                <form>
+                    <div class="txt-form">
+                        <label class="label" for="fullname"></label>
+                        <input type="text" id="name" name="name" placeholder="Name">
                     </div>
-                </div>
+                    <div class="txt-form">
+                        <label class="label" for="email"></label>
+                        <input type="text" id="email" name="email" placeholder="example@email.com">
+                    </div>
+    
+                    <div class="txt-form">
+                        <label class="label" for="comment"></label>
+                        <textarea name="comment" id="comment" placeholder="Message"></textarea>
+                    </div>
+                    <a class="btn btn-form">Send</a>
+                </form>
             </div>
-
-
-            <form>
-                <div class="txt-form">
-                    <label class="label" for="fullname"></label>
-                    <input type="text" id="name" name="name" placeholder="Name">
-                </div>
-                <div class="txt-form">
-                    <label class="label" for="email"></label>
-                    <input type="text" id="email" name="email" placeholder="example@email.com">
-                </div>
-
-                <div class="txt-form">
-                    <label class="label" for="comment"></label>
-                    <textarea name="comment" id="comment" placeholder="Message"></textarea>
-                </div>
-                <a class="btn btn-form">Send</a>
-            </form>
+         
 
         </section>
 
