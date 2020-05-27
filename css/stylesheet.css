@@ -230,12 +230,12 @@ a {
 .image-bg {
   width: 100%;
   line-height: 1.5;
-  background: url(../images/re-cycle_small.jpg) no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  height: 100vh;
+  background-image: url(../images/re-cycle_small.jpg);
   margin-top: 60px;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .alpha-bg {
@@ -746,7 +746,7 @@ textarea {
   }
 
   .image-bg {
-    background: url(../images/cycling_landscape.jpg) no-repeat;
+    background-image: url(../images/cycling_landscape.jpg);
 
   }
 
