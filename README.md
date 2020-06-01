@@ -1,4 +1,4 @@
-#HTML & CSS - Course Assignment: Mobile-responsive website
+HTML & CSS - Course Assignment: Mobile-responsive website
 ## Goal
 ###### Get used to coding for mobile first.
 ## Brief
