@@ -407,7 +407,7 @@ footer {
 
 
 /*---CONTACT---*/
-contact-inner-wrapper {
+.contact-inner-wrapper {
   width: 100%;
 }
 
@@ -422,7 +422,7 @@ contact-inner-wrapper {
 
 }
 
-.inner-container .contact-info:nth-child(1) {
+.inner-container .contact-info {
   margin-bottom: 1rem;
 }
 
@@ -461,13 +461,6 @@ form {
   margin: 0;
   font-size: 0.7rem;
 }
-.txt-form {
-  font-size: 0.8rem;
-  border: 1px solid #0f1e44;
-  margin: 15px 0;
-  padding: 12px 6px;
-  border-radius: 3px;
-}
 
 .txt-form label {
   display: block;
@@ -483,26 +476,56 @@ textarea {
 .txt-form input,
 .txt-form textarea {
   width: 100%;
-  border: none;
-  background: none;
-  outline: none;
-  margin-top: 6px;
   color: #0f1e44;
+  font-size: 0.8rem;
+  border: 1px solid #0f1e44;
+  padding: 12px 6px;
+  border-radius: 3px;
 }
+.txt-form:nth-child(1) input {
+  margin-bottom: 0.2rem;
+}
+
+.txt-form:nth-child(2) input,
+.txt-form textarea {
+  margin-top: 1rem;
+  margin-bottom: 0.2rem;
+}
+
 form button {
   width: 100%;
+  background: transparent;
+  margin-top: 0.6rem;
 }
 
 .btn-form {
   color: var(--clr-dark-blue);
   width: 100%;
   text-align: center;
-  padding: 8px 33px;
+  padding: 2px 33px;
     font-size: 1rem;
 }
 
 .inner-contact-form div {
   background: white;
+}
+
+.txt-form span {
+  font-size: 0.7rem;
+  color: #dc1c37;
+  display: none;
+}
+.txt-form.error input, .txt-form.error textarea {
+  border-color: #dc1c37;
+ background: #f9f2f2;
+}
+.txt-form.valid input{
+  border-color: #02c39a;
+ background: transparent;
+}
+
+.successMessage {
+  display: none;
 }
 /*--END CONTACT--*/
 
@@ -608,7 +631,6 @@ form button {
         -ms-flex-pack: justify;
             justify-content: space-between;
     height: 100%;
-    width: 100%;
    
   }
 
