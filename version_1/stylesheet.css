@@ -1,0 +1,844 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+
+.main-wrapper {
+    margin-top: 70px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    color: #0F1E44;
+}
+
+
+h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+h3 {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.intro-header h2,
+.steps-container h2 {
+    padding: 5px 10px;
+    font-size: 25px;
+    padding: 20px;
+}
+
+
+p {
+    font-family: 'Barlow', sans-serif;
+    font-style: normal;
+    font-size: .9em;
+    text-align: left;
+    color: #0F1E44;
+    line-height: 1.5;
+    margin-bottom: 0.85em;
+    padding: 0;
+    margin: 0;
+}
+
+.about-title,
+.tour-title,
+.contact-title {
+    font-size: 2em;
+    padding: 5% 0;
+}
+
+
+.main-header {
+    background: #0D5956;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.main-wrapper {
+    min-height: 100vh;
+}
+
+footer {
+    background: #0D5956;
+    width: 100%;
+    padding: 30px 0;
+}
+
+
+
+a {
+    text-decoration: none;
+    font-family: 'Barlow', sans-serif;
+    font-size: 25px;
+    color: #F1F7EE;
+}
+
+.logo {
+    width: 100px;
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+
+.btn-container {
+    text-align: center;
+}
+
+.btn {
+    background: #275956;
+    border-radius: 10px;
+    padding: 20px 40px;
+    display: inline-block;
+    font-size: 1rem;
+}
+
+.btn a {
+    text-align: center;
+}
+
+
+
+
+/*NAV*/
+.nav-bar {
+    text-align: right;
+    height: 70px;
+    background: #0D5956;
+}
+
+.menu {
+    margin: 0 30px 0 0;
+    background: #0D5956;
+}
+
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: #F1F7EE;
+    margin: 0 10px;
+    line-height: 70px;
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 17px;
+}
+
+.menu a:hover,
+.menu a:focus {
+    color: #227A24;
+    text-decoration: underline;
+}
+
+
+.mobile-menu {
+    margin: 0 40px 0 0;
+    font-size: 40px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+    color: #F1F7EE;
+}
+
+#toggle {
+    display: none;
+}
+
+/*----END NAV-----*/
+
+
+
+
+
+/*---MAIN PAGE---*/
+
+
+.image-bg {
+    width: 100%;
+    line-height: 1.5;
+    background: url(images/re-cycle_small.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+}
+
+.alpha-bg {
+    padding: 0px 20px;
+    height: 100%;
+    color: #F1F7EE;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.alpha-bg h1 {
+    font-size: 2em;
+    color: #F1F7EE;
+}
+
+
+.alpha-bg p {
+    margin: 0px 5px 40px 5px;
+    padding: 40px 0 0 0;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #F1F7EE;
+    text-align: center;
+}
+
+.img-content {
+    padding: 20% 0 5% 0;
+}
+
+
+.intro {
+    background: #F1F7EE;
+    padding: 4em 0 2em;
+}
+
+
+.content-wrapper h3 {
+    padding: 20px;
+    font-size: 23px;
+}
+
+
+.intro section p {
+    margin: 0 40px;
+    line-height: 2;
+    font-size: 20px;
+}
+
+
+.content-wrapper section {
+    margin: 40px 0;
+}
+
+footer p {
+    color: #F1F7EE;
+    text-align: center;
+}
+
+
+/*---END MAIN PAGE---*/
+
+
+
+
+/*---ABOUT US---*/
+
+.about-wrapper {
+    background: #F1F7EE;
+    padding-bottom: 10%;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+.about-title {
+    color: #0F1E44;
+}
+
+.inner-container-1 {
+    -webkit-box-flex: 25%;
+        -ms-flex: 25%;
+            flex: 25%;
+    width: 100%;
+}
+
+.bg-img-team {
+    background: url(images/team.jpg) no-repeat;
+    width: 100%;
+    line-height: 1.5;
+    background-size: cover;
+    height: 400px;
+    background-position: center;
+}
+
+
+.inner-container-2 {
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    background: #AECEC0;
+}
+
+.inner-container-2 p {
+    padding: 5% 5%;
+    font-size: 1.4em;
+    margin: 0 auto;
+}
+
+
+/*---END ABOUT US---*/
+
+
+
+
+
+/*---TOURS---*/
+
+.tour-wrapper {
+    background: #AECEC0;
+    padding-bottom: 10%;
+}
+
+
+.inner-container-bg {
+    background: #F1F7EE;
+}
+
+
+.bg-img-city {
+    background: url(images/city-biking-small.jpg) no-repeat;
+    width: 100%;
+    line-height: 1.5;
+    background-size: cover;
+    height: 400px;
+    background-position: center;
+}
+
+.bg-img-river {
+    background: url(images/river-biking-small.jpg) no-repeat;
+    width: 100%;
+    line-height: 1.5;
+    background-size: cover;
+    height: 400px;
+    background-position: center;
+}
+
+.bg-img-mountain {
+    background: url(images/mountain-biking-small.jpg) no-repeat;
+    width: 100%;
+    line-height: 1.5;
+    background-size: cover;
+    height: 400px;
+    background-position: center;
+
+}
+
+.adventures {
+    color: #0F1E44;
+    font-style: italic;
+    padding-bottom: 0;
+}
+
+.card-title {
+    font-weight: 500;
+}
+
+.time {
+    font-weight: 500;
+    color: #227A24;
+}
+
+.tour-container {
+    margin-bottom: 5%;
+}
+
+.tour-content-right {
+    margin-bottom: 30px;
+}
+
+
+.tour-content-right a {
+    color: #0F1E44;
+    text-decoration: underline;
+    font-size: 1.2em;
+    text-transform: inherit;
+    padding: 5% 2% 2% 3%;
+}
+
+
+/*---END TOURS---*/
+
+
+
+
+/*---CONTACT---*/
+.contact-wrapper {
+    background: #F1F7EE;
+    padding-bottom: 30%;
+}
+
+
+.contact-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 13px;
+}
+
+
+.inner-contact-title {
+    font-size: 1.6em;
+    padding: 5%;
+    font-weight: 500;
+}
+
+
+.inner-contact-title .adress {
+    margin-top: 20%;
+}
+
+
+.top p,
+.bottom p {
+    font-size: 1.4em;
+}
+
+.txt-form {
+    border: 1px solid #0F1E44;
+    margin: 15px 0;
+    padding: 12px 18px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.txt-form label {
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+textarea {
+    height: 100px;
+}
+
+.txt-form input,
+.txt-form textarea {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    font-size: 1em;
+    margin-top: 6px;
+
+}
+
+
+.btn-form {
+    background: #227A24;
+    padding: 20px 70px;
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.inner-contact-form div {
+    background: white;
+}
+
+
+/*--END CONTACT--*/
+
+
+
+
+
+
+
+
+/*--MEDIA QUARIES--*/
+
+@media only screen and (max-width: 370px) {
+
+    .alpha-bg h1 {
+        font-size: 1.5rem;
+    }
+
+    .alpha-bg p {
+        font-size: 1rem;
+    }
+
+    .contact-flex {
+        font-size: 12px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 20px;
+    }
+    .txt-form {
+        width: 200px;
+    }
+
+}
+
+
+
+
+@media only screen and (max-width: 850px) {
+    .mobile-menu {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #F1F7EE;
+        margin: 0;
+    }
+
+    #toggle:checked+.menu {
+        display: block;
+
+    }
+
+}
+
+
+@media only screen and (min-width: 700px) {
+
+    /*--START PAGE --*/
+    .intro-header h1 {
+        font-size: 2.5em;
+    }
+
+    .intro section p {
+        font-size: 1.3em;
+        padding: 20px;
+        margin: 0;
+        text-align: left;
+    }
+
+
+
+    /*--ABOUT US --*/
+
+    .inner-container-1,
+    .inner-container-2 {
+        width: 80%;
+    }
+
+    .content-right {
+        height: 400px;
+    }
+
+    .content-right p {
+        padding: 5% 2% 2% 3%;
+        line-height: 2;
+        font-size: 1.2em;
+    }
+
+
+    .tour-content-right {
+        height: 600px;
+    }
+
+    .tour-title,
+    .about-title,
+    .contact-title {
+        font-size: 2.5em;
+    }
+
+
+    /*---CONTACT---*/
+    .contact-flex {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
+    }
+
+}
+
+
+
+@media only screen and (min-width: 800px) {
+    .image-bg {
+        background: url(images/cycling_landscape.jpg) no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .content-wrapper {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+
+    .intro-header h1 {
+        margin-bottom: 0.5em;
+    }
+
+    .btn {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+    .main-header {
+        background: #0D5956;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+    }
+
+    .logo {
+        left: 200px;
+    }
+
+    .inner-header {
+        width: 70%;
+       float: right;
+    }
+
+    /*MAIN PAGE---*/
+    .outer-section {
+        width: 80%;
+        margin: 0 auto;
+        padding: 30px 0;
+    }
+
+    .img-content {
+        width: 60%;
+        margin: 0 auto;
+        padding: 10% 0 5% 0;
+
+    }
+
+    .content-wrapper h3 {
+        text-align: left;
+    }
+
+    .btn {
+        font-size: 20px;
+        padding: 15px 34px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+
+    /*--ABOUT US --*/
+    .container {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-align: normal;
+            -ms-flex-align: normal;
+                align-items: normal;
+        width: 65%
+    }
+
+    .bg-img-team {
+        background: url(images/team-big.jpg) no-repeat;
+        width: 100%;
+        line-height: 1.5;
+        background-size: cover;
+        height: 400px;
+        background-position: center center;
+
+    }
+
+    .inner-container-2 {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    .content-right {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+    }
+
+    .content-right p {
+        padding: 5% 5%;
+        line-height: 1.8;
+        font-size: 1.1em;
+    }
+
+    /*---TOURS---*/
+    .tour-title {
+        padding: 5% 0 0 0;
+    }
+
+
+    .bg-img-city {
+        background: url(images/city-biking-big.jpg) no-repeat;
+        width: 100%;
+        line-height: 1.5;
+        background-size: cover;
+        height: 400px;
+        background-position: center;
+    }
+
+    .bg-img-river {
+        background: url(images/river-biking-big.jpg) no-repeat;
+        width: 100%;
+        line-height: 1.5;
+        background-size: cover;
+        height: 400px;
+        background-position: center;
+    }
+
+    .bg-img-mountain {
+        background: url(images/mountain_biking_big.jpg) no-repeat;
+        width: 100%;
+        line-height: 1.5;
+        background-size: cover;
+        height: 400px;
+        background-position: center;
+
+    }
+
+    .city-mobile,
+    .river-mobile,
+    .mountain-mobile {
+        display: none;
+    }
+
+    .city-desktop,
+    .river-desktop,
+    .mountain-desktop {
+        display: block;
+    }
+
+    .tour-container {
+        margin-top: 5%;
+    }
+
+    .tour-content-right {
+        display: block;
+        padding: 0 10%;
+    }
+
+    .tour-content-right p {
+        padding: 0;
+        font-size: 1em;
+        padding-bottom: 2%;
+    }
+
+    .tour-content-right-city,
+    .tour-content-right-river,
+    .tour-content-right-mountain {
+        height: auto;
+    }
+
+
+    .adventures,
+    .time {
+        font-size: 1em;
+    }
+
+    .card-title {
+        font-size: 1.5em;
+
+    }
+
+    .tour-container-reverse {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+    }
+
+
+    .tour-content-right a {
+        padding: 0;
+
+    }
+
+
+    /*----CONTACT----*/
+
+    .contact-flex {
+        display: block;
+    }
+
+    .txt-form {
+        width: 500px;
+    }
+
+    .contact-info-container {
+        margin: 20px;
+    }
+
+    .btn-form {
+        border-radius: 5px;
+    }
+}
