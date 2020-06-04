@@ -87,7 +87,7 @@ p {
   color: var(--clr-text);
   line-height: 1.5;
   margin-top: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 a {
@@ -331,6 +331,7 @@ footer {
 
 .about-wrapper .img-container {
   background-image: url(../images/team.jpg);
+  margin-bottom: 1rem;
 }
 /*---END ABOUT US---*/
 
@@ -395,13 +396,21 @@ footer {
 .tour-content-right {
   margin-bottom: 30px;
 }
+.content-right h3 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
 
-.content-container a {
+.content-container a, .content-right a {
   color: #0f1e44;
   text-decoration: underline;
   font-size: 0.9rem;
   text-transform: inherit;
 }
+.content-container a:hover, .content-right a:hover {
+  color: #02c39a;
+}
+
 /*---END TOURS---*/
 
 
