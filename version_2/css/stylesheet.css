@@ -506,6 +506,7 @@ textarea {
   width: 100%;
   border-radius: 3px;
   border: 2px solid #60c59b;
+  background-color: #f1f7ee;
 }
 .btn-form:hover {
   background: #02c39a;
